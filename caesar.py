@@ -13,8 +13,9 @@ for i in range(len(data_encode)):
   if data_encode[i].isupper():
     data_encode[i] = chr((ord(data_encode[i]) + step - 65) % 26 + 65)
 result_encode = ''.join(data_encode)
-st.text("Result: ")
-st.write(result_encode)
+if string_encode != '':
+  st.text("Result: ")
+  st.write(result_encode)
 
 st.header("Decode:")
 string_decode = ''
@@ -31,6 +32,7 @@ for k in range(25):
       data_decode[i] = chr((ord(data_decode[i]) - 40) % 26 + 65)
   result = ''.join(data_decode)
   result_decode.append(result)
-st.text("Result")
-for i in range(len(result_decode)):
-  st.write(i+1, ' ', result_decode[i])
+if string_decode != '': 
+  st.text("Result")
+  for i in range(len(result_decode)):
+    st.write(i+1, ' ', result_decode[i])
