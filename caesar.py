@@ -14,3 +14,21 @@ for i in range(len(data_encode)):
 result_encode = ''.join(data_encode)
 st.text("Result: ")
 st.write(result_encode)
+
+st.text("Decode:")
+string_decode = st.text_input('Input string:')
+data_decode = list(string_decode)
+result_decode = []
+for k in range(1,25):
+  for i in range(len(data_decode)):
+    if data_decode[i].isspace():
+        continue
+    if data_decode[i].islower():
+      data_decode[i] = chr((ord(data_decode[i]) + step - 98) % 26 + 97)
+    if data_decode[i].isupper():
+      data_decode[i] = chr((ord(data_decode[i]) + step - 66) % 26 + 65)
+      data_decode = ''.join(data_decode)
+  result = ''.join(data_decode)
+  result_decode.append(result)
+  st.text("Result: ")
+  st.write(result_decode)
