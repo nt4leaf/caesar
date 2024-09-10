@@ -1,15 +1,16 @@
 import streamlit as st
 
-my_string = st.text_input('Input string:')
-step = st.number_input('Input step:', step=1)
-data = list(my_string)
+st.text("Encode:")
+string_encode = st.text_input('Input string:')
+step = st.number_input('Input step:', )
+data_encode = list(string_encode)
 for i in range(len(data)):
-  if data[i].isspace():
+  if data_encode[i].isspace():
       continue
-  if data[i].islower():
-    data[i] = chr((ord(data[i]) + step - 97) % 26 + 97)
-  if data[i].isupper():
-    data[i] = chr((ord(data[i]) + step - 65) % 26 + 65)
-result = ''.join(data)
+  if data_encode[i].islower():
+    data_encode[i] = chr((ord(data_encode[i]) + step - 97) % 26 + 97)
+  if data_encode[i]].isupper():
+    data_encode[i] = chr((ord(data_encode[i]) + step - 65) % 26 + 65)
+result_encode = ''.join(data_encode)
 st.text("Result: ")
-st.write(result)
+st.write(encode)
