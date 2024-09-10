@@ -1,5 +1,5 @@
 import streamlit as st
-
+st.caption("Written by Nguyen Tuan")
 st.header("Encode:")
 string_encode = ''
 string_encode = st.text_input('Encode string:')
