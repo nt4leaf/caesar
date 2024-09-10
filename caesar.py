@@ -1,4 +1,4 @@
-import streamlist as st
+import streamlit as st
 
 data = 'Phenikaa University'
 st.write('data = ', data)
