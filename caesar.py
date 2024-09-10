@@ -1,7 +1,14 @@
 import streamlit as st
 
-data = 'Phenikaa University'
-st.write('data = ', data)
+my_string = 'Phenikaa University'
+step = 1
+data = list(my_string)
 for i in range(len(data)):
-  data[i] = data + 1
-st.write(data)
+  if data[i].isspace():
+      continue
+  if data[i].islower():
+    data[i] = chr((ord(data[i]) - 97) % 26 + step + 97)
+  if data[i].isupper():
+    data[i] = chr((ord(data[i]) - 65) % 26 + step + 65)
+result = ''.join(data)
+st.write(result)
