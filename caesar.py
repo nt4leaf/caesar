@@ -11,4 +11,5 @@ for i in range(len(data)):
   if data[i].isupper():
     data[i] = chr((ord(data[i]) + step - 65) % 26 + 65)
 result = ''.join(data)
-st.write("Result: "result)
+st.text("Result: ")
+st.write(result)
