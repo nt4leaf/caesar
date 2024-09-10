@@ -33,5 +33,5 @@ for k in range(25):
   result_decode.append(result)
 st.header("Decode")
 for i in range(len(result_decode)):
-  st.write(i+1, result_decode[i])
+  st.write(-i-1, result_decode[i])
 #st.write(result_decode)
