@@ -1,6 +1,7 @@
 import streamlit as st
 
 st.text("Encode:")
+string_encode = ''
 string_encode = st.text_input('Encode string:')
 step = st.number_input('Input step:', step = 1)
 data_encode = list(string_encode)
@@ -16,6 +17,7 @@ st.text("Encode: ")
 st.write(result_encode)
 
 st.text("Decode:")
+string_decode = ''
 string_decode = st.text_input('Decode string:')
 data_decode = list(string_decode)
 result_decode = []
@@ -30,6 +32,7 @@ for k in range(25):
   result = ''.join(data_decode)
   result_decode.append(result)
 st.header("Decode")
-for i in result_decode:
-  st.write(i)
+for i in range(len(result_decode)):
+  st.text(i+1)
+  st.write(result_decode[i])
 #st.write(result_decode)
