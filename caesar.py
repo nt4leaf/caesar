@@ -1,6 +1,6 @@
 import streamlit as st
 
-my_string = st.text_input()
+my_string = st.text_input('Input string:')
 step = 1
 data = list(my_string)
 for i in range(len(data)):
