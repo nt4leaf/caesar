@@ -4,7 +4,7 @@ st.text("Encode:")
 string_encode = st.text_input('Input string:')
 step = st.number_input('Input step:', step = 1)
 data_encode = list(string_encode)
-for i in range(len(data)):
+for i in range(len(data_encode)):
   if data_encode[i].isspace():
       continue
   if data_encode[i].islower():
