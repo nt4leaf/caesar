@@ -9,9 +9,9 @@ for i in range(len(data_decode)):
   if data_decode[i].isspace():
     continue
   if data_decode[i].islower():
-    data_decode[i] = chr((ord(data_decode[i]) + step - 72) % 26 + 97)
+    data_decode[i] = chr((ord(data_decode[i]) - 72) % 26 + 97)
   if data_decode[i].isupper():
-    data_decode[i] = chr((ord(data_decode[i]) + step - 40) % 26 + 65)
+    data_decode[i] = chr((ord(data_decode[i]) - 40) % 26 + 65)
 data_decode = ''.join(data_decode)
 result = ''.join(data_decode)
 result_decode.append(result)
