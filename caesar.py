@@ -13,4 +13,4 @@ for i in range(len(data_encode)):
     data_encode[i] = chr((ord(data_encode[i]) + step - 65) % 26 + 65)
 result_encode = ''.join(data_encode)
 st.text("Result: ")
-st.write(encode)
+st.write(result_encode)
