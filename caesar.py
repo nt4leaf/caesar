@@ -30,4 +30,6 @@ for k in range(25):
   result = ''.join(data_decode)
   result_decode.append(result)
 st.header("Decode")
-st.write(result_decode)
+for i in result_decode:
+  st.write(i)
+#st.write(result_decode)
