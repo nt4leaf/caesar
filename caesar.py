@@ -12,8 +12,7 @@ for k in range(2):
       data_decode[i] = chr((ord(data_decode[i]) - 72) % 26 + 97)
     if data_decode[i].isupper():
       data_decode[i] = chr((ord(data_decode[i]) - 40) % 26 + 65)
-  data_decode = ''.join(data_decode)
   result = ''.join(data_decode)
-result_decode.append(result)
-st.text("Result: ")
+  result_decode.append(result)
+st.header("Decode")
 st.write(result_decode)
