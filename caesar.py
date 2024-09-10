@@ -1,6 +1,6 @@
 import streamlit as st
 
-my_string = 'Phenikaa University'
+my_string = st.text_input()
 step = 1
 data = list(my_string)
 for i in range(len(data)):
