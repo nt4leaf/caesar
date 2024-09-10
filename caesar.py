@@ -33,6 +33,6 @@ for k in range(25):
   result = ''.join(data_decode)
   result_decode.append(result)
 if string_decode != '': 
-  st.text("Result")
+  st.text("Result:")
   for i in range(len(result_decode)):
     st.write(i+1, ' ', result_decode[i])
