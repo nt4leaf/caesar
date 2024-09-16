@@ -31,19 +31,3 @@ for i in range(len(data_decode)):
     data_decode[i] = chr((ord(data_decode[i]) + step - 65) % 26 + 65)
 result_decode = ''.join(data_decode)
 
-"""
-for k in range(25):
-  for i in range(len(data_decode)):
-    if data_decode[i].isspace():
-      continue
-    if data_decode[i].islower():
-      data_decode[i] = chr((ord(data_decode[i]) - 72) % 26 + 97)
-    if data_decode[i].isupper():
-      data_decode[i] = chr((ord(data_decode[i]) - 40) % 26 + 65)
-  result = ''.join(data_decode)
-  result_decode.append(result)
-if string_decode != '': 
-  st.text("Result:")
-  for i in range(len(result_decode)):
-    st.write(i+1, ' ', result_decode[i])
-"""
