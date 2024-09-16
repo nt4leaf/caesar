@@ -3,7 +3,7 @@ st.caption("Written by Nguyen Tuan")
 st.header("Encode:")
 string_encode = ''
 string_encode = st.text_input('Encode string:')
-step_encode = st.number_input('Input step-encode:', step = 1)
+step_encode = st.number_input('Input step-encode:', step = 1, max_value = 25)
 data_encode = list(string_encode)
 if string_encode != '':
   for i in range(len(data_encode)):
@@ -20,7 +20,7 @@ if string_encode != '':
 st.header("Decode:")
 string_decode = ''
 string_decode = st.text_input('Decode string:')
-step_decode = st.number_input('Input step-decode:', step = 1)
+step_decode = st.number_input('Input step-decode:', step = 1, max_value = 25)
 data_decode = list(string_decode)
 result_decode = []
 if string_decode != '':
