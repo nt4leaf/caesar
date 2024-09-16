@@ -28,9 +28,9 @@ if string_decode != '':
     if data_decode[i].isspace():
         continue
     if data_decode[i].islower():
-      data_decode[i] = chr((ord(data_decode[i]) - 97) % 26 + 97 - step_decode)
+      data_decode[i] = chr((ord(data_decode[i]) - 97 + 26 - step_decode) % 26 + 97)
     if data_decode[i].isupper():
-      data_decode[i] = chr((ord(data_decode[i]) - 65) % 26 + 65 - step_decode)
+      data_decode[i] = chr((ord(data_decode[i]) - 65 + 26 - step_decode) % 26 + 65)
   result_decode = ''.join(data_decode)
   st.text("Result: ")
   st.write(result_decode)
