@@ -35,7 +35,7 @@ if string_decode != '':
   st.text("Result: ")
   st.write(result_decode)
 
-st.text("Encrypt:")
+st.header("Encrypt:")
 string_encrypt = st.text_input('Encrypt string:')
 data_encrypt = list(string_encrypt)
 result_decode = []
