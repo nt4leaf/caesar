@@ -39,16 +39,17 @@ st.header("Encrypt:")
 string_encrypt = st.text_input('Encrypt string:')
 data_encrypt = list(string_encrypt)
 result_encrypt = []
-for k in range(1,25):
-  for i in range(len(data_encrypt)):
-    if data_encrypt[i].isspace():
-        continue
-    if  data_encrypt[i].islower():
-       data_encrypt[i] = chr((ord( data_encrypt[i]) - 97 - 1 + 26) % 26 + 97)
-    if  data_encrypt[i].isupper():
-       data_encrypt[i] = chr((ord( data_encrypt[i]) - 65 - 1 + 26) % 26 + 65)
-       data_encrypt = ''.join(data_encrypt)
-  result = ''.join(data_encrypt)
-  result_encrypt.append(result)
+if string_encrypt != '':
+  for k in range(1,25):
+    for i in range(len(data_encrypt)):
+      if data_encrypt[i].isspace():
+          continue
+      if  data_encrypt[i].islower():
+         data_encrypt[i] = chr((ord( data_encrypt[i]) - 97 - 1 + 26) % 26 + 97)
+      if  data_encrypt[i].isupper():
+         data_encrypt[i] = chr((ord( data_encrypt[i]) - 65 - 1 + 26) % 26 + 65)
+         data_encrypt = ''.join(data_encrypt)
+    result = ''.join(data_encrypt)
+    result_encrypt.append(result)
   st.text("Result: ")
   st.write(result_encrypt)
